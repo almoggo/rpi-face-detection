@@ -29,7 +29,7 @@ def test():
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
     # build a response dict to send back to client
     cv2.imwrite('image-face.jpg', img)
-    response = {'message': 'image received. size={}x{}'.format(img.shape[1], img.shape[0])
+    response = {'message': 'image received. size={}x{}'.format(img.shape[1], img.shape[0])}
     # encode response using jsonpickle
     response_pickled = jsonpickle.encode(response)
 
